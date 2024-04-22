@@ -1,4 +1,4 @@
-# Nome del Progetto
+# OrderFotto
 
 Questo progetto si occupa di spostare e riordinare le immagini presenti in una cartella, suddividendole in sotto-cartelle divise per anno e mese. 
 
