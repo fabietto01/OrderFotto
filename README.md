@@ -1,30 +1,30 @@
 # OrderFotto
 
-Questo progetto si occupa di spostare e riordinare le immagini presenti in una cartella, suddividendole in sotto-cartelle divise per anno e mese. 
+This project is responsible for moving and reordering the images in a folder, dividing them into sub-folders divided by year and month.
 
-## Indice
+## Index
 
-- [Installazione](#installazione)
-- [Utilizzo](#utilizzo)
+- [Installation](#installation)
+- [Usage](#usage)
 
-## Installazione
+## Installation
 
-Segui questi passaggi per installare il progetto:
+Follow these steps to install the project:
 
-1. Clona il repository: `git clone https://github.com/fabietto01/OrderFotto.git`
-2. Entra nella directory del progetto: `cd OrderFotto`
-3. Crea un ambiente virtuale Python: `python3 -m venv env`
-4. Attiva l'ambiente virtuale: 
-    - Su Windows: `.\env\Scripts\activate`
-    - Su Unix o MacOS: `source env/bin/activate`
-5. Installa le dipendenze dal file requirements.txt: `pip install -r requirements.txt`
+1. Clone the repository: `git clone https://github.com/fabietto01/OrderFotto.git`
+2. Enter the project directory: `cd OrderFotto`
+3. Create a Python virtual environment: `python3 -m venv env`
+4. Activate the virtual environment: 
+    - On Windows: `.\env\Scripts\activate`
+    - On Unix or MacOS: `source env/bin/activate`
+5. Install the dependencies from the requirements.txt file: `pip install -r requirements.txt`
 
-## Utilizzo
+## Usage
 
-Per utilizzare il progetto, è sufficiente avviare il file main.py e passare gli argomenti richiesti: `--input`, `--output` e `--multi-thread`. L'argomento `--multi-thread` non è obbligatorio e di default è impostato su false. Gli altri due argomenti, `--input` e `--output`, rappresentano rispettivamente la cartella di origine dove sono presenti tutte le foto e la cartella di destinazione dove lo script inserirà le immagini.
+To use the project, simply start the main.py file and pass the required arguments: `--input`, `--output` and `--multi-thread`. The `--multi-thread` argument is not mandatory and by default is set to false. The other two arguments, `--input` and `--output`, represent respectively the source folder where all the photos are present and the destination folder where the script will insert the images.
 
-Ad esempio:
+For example:
 
-1. Esegui il comando: `python main.py --input percorso/alla/cartella/delle/foto --output percorso/alla/cartella/di/destinazione`
-2. Se desideri utilizzare il multi-threading, aggiungi l'argomento `--multi-thread`: `python main.py --input percorso/alla/cartella/delle/foto --output percorso/alla/cartella/di/destinazione --multi-thread`
-3. Segui le istruzioni visualizzate sulla console.
+1. Run the command: `python main.py --input path/to/the/photo/folder --output path/to/the/destination/folder`
+2. If you want to use multi-threading, add the `--multi-thread` argument: `python main.py --input path/to/the/photo/folder --output path/to/the/destination/folder --multi-thread`
+3. Follow the instructions displayed on the console.
