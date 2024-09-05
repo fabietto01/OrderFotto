@@ -58,6 +58,7 @@ class ImageSorter:
                 Each dictionary contains the following keys:
                 - file_path: The path to the image file.
                 - size: The size of the image file in bytes.
+                - creation_time: The timestamp of the creation of the image file.
                 - last_modified: The timestamp of the last modification of the image file.
                 - last_accessed: The timestamp of the last access to the image file.
         """
@@ -69,6 +70,7 @@ class ImageSorter:
                 metadata.append({
                     'file_path': file_path,
                     'size': info.st_size,
+                    'creation_time': info.st_ctime,
                     'last_modified': info.st_mtime,
                     'last_accessed': info.st_atime
                 })
@@ -83,10 +85,12 @@ class ImageSorter:
                 The dictionary should have the following keys:
                 - file_path: The path to the file.
                 - last_modified: The timestamp of the last modification of the file.
+                - creation_time: The timestamp of the creation of the file.
+                - last_accessed: The timestamp of the last access to the file.
         """
-        last_modified = file['last_modified']
-        year = time.strftime('%Y', time.gmtime(last_modified))
-        month = time.strftime('%m', time.gmtime(last_modified))
+        last_date = min(file['last_modified'], file['creation_time'], file['last_accessed'])
+        year = time.strftime('%Y', time.gmtime(last_date))
+        month = time.strftime('%m', time.gmtime(last_date))
         year_dir = os.path.join(self.output_dir, year)
         month_dir = os.path.join(year_dir, month)
         try:
