@@ -99,7 +99,7 @@ class ImageSorter:
         except FileExistsError:
             pass
         finally:
-            shutil.copy(file['file_path'], month_dir)
+            shutil.copy2(file['file_path'], month_dir)
 
     def _run_multi_thread(self):
         """
